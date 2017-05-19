@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitPublisher", "Publisher\RabbitPublisher.csproj", "{AEEE5754-1467-48BF-A4BB-A5EEE8266343}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitConsumer", "Consumer\RabbitConsumer.csproj", "{3FF5B33C-2015-4078-B8E4-C3410566CCDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublisherClient", "PublisherClient\PublisherClient.csproj", "{D30B5EDA-D8FE-4919-BDCE-08FCB7032463}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEEE5754-1467-48BF-A4BB-A5EEE8266343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEEE5754-1467-48BF-A4BB-A5EEE8266343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEEE5754-1467-48BF-A4BB-A5EEE8266343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEEE5754-1467-48BF-A4BB-A5EEE8266343}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF5B33C-2015-4078-B8E4-C3410566CCDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF5B33C-2015-4078-B8E4-C3410566CCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF5B33C-2015-4078-B8E4-C3410566CCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF5B33C-2015-4078-B8E4-C3410566CCDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30B5EDA-D8FE-4919-BDCE-08FCB7032463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30B5EDA-D8FE-4919-BDCE-08FCB7032463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30B5EDA-D8FE-4919-BDCE-08FCB7032463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30B5EDA-D8FE-4919-BDCE-08FCB7032463}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
