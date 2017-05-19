@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Practices.Unity;
 using RabbitPublisher;
 
 
@@ -35,7 +36,7 @@ namespace PublisherClient
 
         private void buttonSend_Click(object sender, EventArgs e)
         {
-
+            publisher.Send("test");
         }
     }
 }

@@ -13,6 +13,8 @@ namespace RabbitPublisher
         private const string UserName = "guest";
         private const string Password = "guest";
         private const string ExchangeName = "Tom.Exchange";
+        private const string QueueName = "Tom.Data.CardTransaction";
+        private const string RoutingKey = "Tom.Data.CardTransaction";
         private const bool IsDurable = true;
         private const string VirtualHost = "";
         private int Port = 0;
@@ -41,6 +43,10 @@ namespace RabbitPublisher
 
             _connection = _connectionFactory.CreateConnection();
             _model = _connection.CreateModel();
+
+            _model.ExchangeDeclare(ExchangeName,  ExchangeType.Topic, IsDurable);
+            _model.QueueDeclare(QueueName, true, false, false, null);
+            _model.QueueBind(QueueName, ExchangeName, RoutingKey);
         }
 
         public string Send(string message)
@@ -48,9 +54,9 @@ namespace RabbitPublisher
             var properties = _model.CreateBasicProperties();
             properties.Persistent = true;
             byte[] messageBuffer = Encoding.Default.GetBytes(message);
-            var routingKey = "Tom.Data.CardTransaction";
-            _model.BasicPublish(ExchangeName, routingKey, properties, messageBuffer);
-            return routingKey;
+            //var address = new PublicationAddress(ExchangeType.Topic, ExchangeName, RoutingKey);
+            _model.BasicPublish(ExchangeName, RoutingKey, properties, messageBuffer);
+            return RoutingKey;
         }
 
         /// <summary>
